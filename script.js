@@ -17,14 +17,17 @@ function loadUrl() {
         url = 'https://' + url;
     }
 
+    var container = document.createElement('div');
+    container.style.cssText = 'position:fixed;top:0;bottom:0;left:0;right:0;width:100%;height:100%;z-index:99;';
+
     var iframe = document.createElement('iframe');
     iframe.src = url;
-    iframe.style.cssText = 'position:fixed;top:0;bottom:0;left:0;right:0;width:100%;height:100%;z-index:99;';
+    iframe.style.cssText = 'width:100%;height:100%;border:none;';
     iframe.textContent = 'Your browser does not support iframes';
     
-    // Replace the body content with the iframe
+    container.appendChild(iframe);
     document.body.innerHTML = '';
-    document.body.appendChild(iframe);
+    document.body.appendChild(container);
     
     alert('URL Loaded!');
 }
