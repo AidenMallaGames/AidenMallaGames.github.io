@@ -25,7 +25,7 @@ function loadUrl() {
     iframe.style.cssText = 'width:100%;height:100%;border:none;';
     
     container.appendChild(iframe);
-    document.body.innerHTML = '';
+    document.body.textContent = ''; // Clear the body
     document.body.appendChild(container);
     
     alert('URL Loaded!');
