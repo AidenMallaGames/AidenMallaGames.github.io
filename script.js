@@ -23,7 +23,6 @@ function loadUrl() {
     var iframe = document.createElement('iframe');
     iframe.src = url;
     iframe.style.cssText = 'width:100%;height:100%;border:none;';
-    iframe.textContent = 'Your browser does not support iframes';
     
     container.appendChild(iframe);
     document.body.innerHTML = '';
