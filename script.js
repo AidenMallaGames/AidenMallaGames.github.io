@@ -1,5 +1,9 @@
 // script.js
 
+document.addEventListener("DOMContentLoaded", function() {
+    loadUrl();
+});
+
 function loadUrl() {
     var url = prompt("Enter URL Here (example: https://google.com)");
 
@@ -24,5 +28,3 @@ function loadUrl() {
     
     alert('URL Loaded!');
 }
-
-loadUrl();
